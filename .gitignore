@@ -1,2 +1,4 @@
+!after/plugin
 plugin
 pack
+.DS_Store
