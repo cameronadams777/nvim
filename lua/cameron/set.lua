@@ -32,3 +32,15 @@ vim.opt.colorcolumn = "80"
 
 vim.opt.clipboard:append("unnamedplus")
 
+vim.api.nvim_create_user_command("Cppath", function()
+  local path = vim.fn.expand("%:p")
+  vim.fn.setreg("+", path)
+  vim.notify('Copied "' .. path .. '" to the clipboard!')
+end, {})
+
+
+vim.api.nvim_create_user_command("CopyRelPath", function()
+  local path = vim.fn.fnamemodify(vim.fn.expand("%"), ":.")
+  vim.fn.setreg("0", path)
+  vim.notify('Copied relative path "' .. path .. '" to the clipboard!')
+end, {})

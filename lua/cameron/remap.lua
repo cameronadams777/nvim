@@ -3,6 +3,11 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", "<cmd>:NvimTreeToggle<CR>")
 vim.keymap.set("n", "<leader>gb", "<cmd>:GitBlameToggle<CR>")
 
+vim.keymap.set("n", "<leader>n", "<cmd>:enew<CR>")
+
+vim.keymap.set("n", "<leader>c", "<cmd>:Cppath<CR>")
+vim.keymap.set("n", "<leader>cr", "<cmd>:CopyRelPath<CR>")
+
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
