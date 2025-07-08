@@ -41,6 +41,6 @@ end, {})
 
 vim.api.nvim_create_user_command("CopyRelPath", function()
   local path = vim.fn.fnamemodify(vim.fn.expand("%"), ":.")
-  vim.fn.setreg("0", path)
+  vim.fn.setreg("+", path)
   vim.notify('Copied relative path "' .. path .. '" to the clipboard!')
 end, {})
